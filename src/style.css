@@ -81,8 +81,9 @@ body {
 }
 
 .product-container button:hover {
-    background-color: #d3a4cc;
+    background-color: #ff8b85;
     transform: scale(1.1);
+    color: #ffff;
 }
 
 .details {
@@ -199,4 +200,106 @@ form button {
 form button:hover {
     background-color: #ef5f57;
 }
+
+/* basket page */
+
+.basket-page {
+    background-image: linear-gradient(to right, #e6dcdb, #ffdbca, #ffe0ae, #ffec8f, #fbff78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.basket-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 60vh;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.basket-detail-container {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(112, 111, 111, 0.2);
+    padding: 10px;
+}
+
+.img-title {
+    width: 30%;
+}
+
+.basket-detail-container p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.basket-image img {
+    width: 100px;
+    height: 100px;
+}
+
+.resume {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.amount-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    height: 40px;
+}
+
+.amount-container button {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.total-price-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 30%;
+    height: 100vh;
+}
+
+.total-price-container p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.total-price-container h6 {
+    font-size: 30px;
+}
+
+.total-price-container button {
+    margin-top: 40px;
+    background-color:#ff8b85;
+    color: #ffff;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.total-price-container button:hover {
+    transform: scale(1.1);
+}
+
 

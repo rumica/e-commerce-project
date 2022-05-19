@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../style.css'
 
 const Basket = ({ onAdd, onRemove, basketItems }) => {
 
@@ -7,27 +8,41 @@ const Basket = ({ onAdd, onRemove, basketItems }) => {
   }, 0)
 
   return (
-    <div>
-        {basketItems.length === 0 && <div>There is no product in the basket</div>}
+    <div className='basket-page'>
+        {basketItems.length === 0 && <div>There is no product in the basket.</div>}
+        <div className='basket-container'>
+            <div>
+                {basketItems.map((item) => (
+                    <div className='basket-detail-container' key={item.id}>
+                        <div className='img-title'>
+                            <div className='basket-image'><img src={item.image} alt="" /></div>
+                            <p>{item.title}</p>
+                        </div>
+                        <div className='resume'>
+                            <div className='total-price'>
+                            ${item.price.toFixed(2)}
+                            </div>
+                            <div className='amount-container'>
+                                <button onClick={() => onRemove(item)}>-</button>
+                                <span>{item.qty}</span>
+                                <button onClick={() => onAdd(item)}>+</button>
+                            </div>
+                            <div className='basket-price'>
+                                ${(item.price.toFixed(2) * item.qty).toFixed(2)}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-        {basketItems.map((item) => (
-            <>
-                <div key={item.id}>
-                    <div>{item.title}</div>
-                </div>
-                <button onClick={() => onAdd(item)}>+</button>
-                <button onClick={() => onRemove(item)}>-</button>
-
-                <div>
-                    {item.qty} x ${item.price.toFixed(2)}
-                </div>
-            </>
-        ))}
-
-        <div>
-            {totalPrice.toFixed(2)}
-        </div>
-
+            <div className='total-price-container'>
+                <p>TOTAL</p>
+                <h6>
+                    ${totalPrice.toFixed(2)}
+                </h6>
+                <button>BUY NOW</button>
+            </div>
+        </div> 
     </div>
   )
 }
