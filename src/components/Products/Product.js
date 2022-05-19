@@ -2,7 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../../style.css'
 
-const Product = ({ product }) => {
+const Product = ({ onAdd, product }) => {
+
+  const [totalPrice, setTotalPrice] = useState([])
+
+  const handleBasket = () => {
+      console.log(product.price)
+  }
+
+  
+
 
   return (
     <div className='product-container'>
@@ -11,7 +20,7 @@ const Product = ({ product }) => {
         </Link>
           <p>{product.title}</p>
           <div className='price'>${product.price}</div>
-        <button>Add to basket</button>
+        <button onClick={() => onAdd(product)}>Add to basket</button>
     </div>
   )
 }

@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import { Icon } from '../../Icons'
+import '../../style.css'
 
 const LoginForm = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('sub')
+  }  
     
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <label>E-mail</label>
-        <Icon name='user'/>
         <input  className='email' type="email" />
         <label>Password</label>
         <input type="password" />

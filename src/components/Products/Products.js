@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import Header from '../Header/Header';
 import Product from './Product'
+import Basket from '../Basket/Basket'
 import '../../style.css'
 
-const Products = () => {
+const Products = ({ onAdd, products }) => {
 
-    const [products, setProducts] = useState()
-
-    useEffect(() => {
-        async function fetchMyAPI() {
-          let { data } = await axios.get('https://fakestoreapi.com/products')
-          setProducts(data)
-        }
-    
-        fetchMyAPI()
-      }, [])
+  
 
       console.log(products)
   return (
@@ -24,7 +15,7 @@ const Products = () => {
       <div className='main-container'>
         {
           products ? products?.map((product, i) => (
-            <Product key={i} product={product}/>
+            <Product key={i} product={product} onAdd={onAdd}/>
         )) : `Loading...`
         }
     </div>
