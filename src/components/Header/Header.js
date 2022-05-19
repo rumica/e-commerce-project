@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../style.css'
 
 const Header = () => {
@@ -6,8 +7,8 @@ const Header = () => {
    <div className='header'>
        <div className="logo">eCommerce</div>
        <div>
-           <button>Login</button>
-           <button>Signup</button>
+           <Link to="/login">Login</Link>
+           <Link to="/register">Register</Link>
        </div>
    </div>
   )

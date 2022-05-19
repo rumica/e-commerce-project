@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     text-decoration: none;
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: rgb(247, 245, 245);
 }
 
 .header {
@@ -22,11 +24,10 @@ body {
 .header button {
     width: 80px;
     height: 40px;
-    border-radius: 8px;
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #765370;
+    background-color: #f9c76a;
     color: #ffff;
     transition: 0.3s all;
 }
@@ -48,7 +49,6 @@ body {
     flex-direction: column;
     width: 320px;
     height: 450px;
-    background-color: #fbeea9;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -60,22 +60,143 @@ body {
     border-radius: 8px;
 }
 
+.product-container p {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 .price {
     font-size: 30px;
 }
 
 .product-container button {
     padding: 10px;
-    border-radius: 8px;
-    border: none;
+    
+    border: 1px solid rgb(182, 173, 173);
     outline: none;
     cursor: pointer;
-    background-color: #684963;
-    color: #ffff;
+    background-color: transparent;
+    color: black;
     transition: 0.3s all;
 }
 
 .product-container button:hover {
-    background-color: #765370;
+    background-color: #d3a4cc;
     transform: scale(1.1);
 }
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 85vh;
+}
+
+.detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(182, 173, 173);
+    width: 70%;
+    height: 70vh;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.product-image img {
+    height: 60vh;
+    width: 90%;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50vh;
+    width: 50%;
+}
+
+.description {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+   
+    height: 50%;
+}
+
+.description h4 {
+    font-size: 30px;
+}
+
+.product-detail button {
+    height: 50px;
+    width: 150px;
+    background-color: #ff8b85
+    ;
+    border: none;
+    font-size: 20px;
+    color: #ffff;
+}
+
+/* Login Page */
+
+.form-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #e6dcdb, #ffdbca, #ffe0ae, #ffec8f, #fbff78);
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 40vh;
+    background-color: rgba(247, 245, 245, 0.7);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+form input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 30px;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+form input:focus {
+    transform: scale(1.1);
+}
+
+form button {
+    height: 40px;
+    width: 150px;
+    background-color: #ff8b85;
+    border: none;
+    font-size: 20px;
+    color: #ffff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ef5f57;
+}
+

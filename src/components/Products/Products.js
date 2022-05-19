@@ -25,7 +25,7 @@ const Products = () => {
         {
           products ? products?.map((product, i) => (
             <Product key={i} product={product}/>
-        )) : "Loading..."
+        )) : `Loading...`
         }
     </div>
     </>
